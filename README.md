@@ -1,4 +1,4 @@
-# DOWNLOAD AND INSTALLATION
+## DOWNLOAD AND INSTALLATION
 
 Download repository
     svn co https://github.com/dariober/genomeGraphs
@@ -13,11 +13,11 @@ User specific installation. No needs for admin rights:
 Install for entire system
     python setup.py install
 
-# TEST AND EXAMPLES
+## TEST AND EXAMPLES
 
 Some examples
     genomeGraphsDemo.py tmp/
 
-# SEE ALSO
+## SEE ALSO
 
 http://code.google.com/p/bioinformatics-misc/wiki/coverage_screenshots_docs
