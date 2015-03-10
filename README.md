@@ -1,23 +1,23 @@
-DOWNLOAD AND INSTALLATION
+# DOWNLOAD AND INSTALLATION
 
 Download repository
-svn co https://github.com/dariober/genomeGraphs
-cd genomeGraphs/trunk/genomeGraphs
+    svn co https://github.com/dariober/genomeGraphs
+    cd genomeGraphs/trunk/genomeGraphs
 
 Optional: delete previous installation build
-python setup.py clean --all
+    python setup.py clean --all
 
 User specific installation. No needs for admin rights:
-python setup.py install --user --install-scripts $HOME/bin/
+    python setup.py install --user --install-scripts $HOME/bin/
 
 Install for entire system
-python setup.py install
+    python setup.py install
 
-TEST AND EXAMPLES
+# TEST AND EXAMPLES
 
 Some examples
-genomeGraphsDemo.py tmp/
+    genomeGraphsDemo.py tmp/
 
-SEE ALSO
+# SEE ALSO
 
 http://code.google.com/p/bioinformatics-misc/wiki/coverage_screenshots_docs
