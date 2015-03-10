@@ -2,19 +2,19 @@
 
 ### Download repository 
 
-with svn
+With svn
 
     svn co https://github.com/dariober/genomeGraphs
     cd genomeGraphs/trunk/genomeGraphs
 
-or download source [genomeGraphs-master.zip](https://github.com/dariober/genomeGraphs/archive/master.zip), unzip and change directory to genomeGraphs
+Or download source [genomeGraphs-master.zip](https://github.com/dariober/genomeGraphs/archive/master.zip), unzip and change directory to genomeGraphs
 
     unzip genomeGraphs-master.zip
     cd genomeGraphs-master/genomeGraphs
 
 ### Install
 
-Optional: delete previous installation build
+Optional, typically not required: delete previous installation build
 
     python setup.py clean --all
 
@@ -22,7 +22,7 @@ User specific installation. No need of admin rights:
 
     python setup.py install --user --install-scripts $HOME/bin/
 
-Or install for the entire system, need root access:
+Or install for all users, root access required:
 
     python setup.py install
 
