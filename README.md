@@ -1,6 +1,4 @@
-## Download
-
-### Download repository 
+### Download
 
 With svn
 
@@ -28,7 +26,7 @@ Or install for all users, root access required:
 
 ## See also
 
-To view help and and options
+To view help and options:
 
     genomeGraphs -h
 
