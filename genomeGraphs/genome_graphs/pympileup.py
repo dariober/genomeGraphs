@@ -246,7 +246,7 @@ def bamlist_to_mpileup(mpileup_name, mpileup_grp_name, bamlist, region, nwinds, 
         libsizes= getLibrarySizes(bamlist, samtools_path= samtools)
         libsizes= [libsizes[x] for x in bamlist]
     cmd= mpileup_java_cmd(bamlist= bamlist, region= region, fasta= fasta, mpileup= os.path.join(samtools, 'samtools mpileup'))
-    proc= subprocess.Popen(cmd, shell= True, stdout=subprocess.PIPE, stderr= subprocess.PIPE)
+    proc= subprocess.Popen(cmd, shell= True, stdout=subprocess.PIPE, stderr= subprocess.PIPE, executable='/bin/bash')
     nlines= 0
     while True:
         ## Use this while loop to avoid reading in memory all the output of mpileup.

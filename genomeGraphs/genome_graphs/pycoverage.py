@@ -196,7 +196,7 @@ def prefilter_nonbam_multiproc(inbed, nonbam, tmpdir, sorted):
         ## Since a b-feature can span several a-features, use sort | uniq the remove duplicate rows coming from the b-file
         nonbam_x_inbed= pybedtools.BedTool().intersect(b= pynonbam, a= inbed, wb= True, sorted= sorted).cut(range(ncolbed, ncolbdg+ncolbed)).saveas()
         cmd= 'set -e; set -o pipefail; sort -k1,1 -k2,2n -k3,3n %(bed)s | uniq > %(bedu)s; mv %(bedu)s %(bed)s' %{'bed': nonbam_x_inbed.fn, 'bedu': nonbam_x_inbed.fn + '.uniq'}
-        p= subprocess.Popen(cmd, shell= True, stderr= subprocess.PIPE, stdout= subprocess.PIPE)
+        p= subprocess.Popen(cmd, shell= True, stderr= subprocess.PIPE, stdout= subprocess.PIPE, executable='/bin/bash')
         stdout, stderr= p.communicate()
         if p.returncode != 0:
             print(sterr)
@@ -298,7 +298,7 @@ def RPlot(**kwargs):
     stdout, stderr= p.communicate()
     if stderr != '':
         print(stderr)
-    return({'stdout':stdout, 'stderr': stderr})
+    return({'stdout':stdout, 'stderr': stderr, 'returncode': p.returncode})
         
 def catPdf(in_pdf, out_pdf):
     """Concatenate the PDF files in list `in_pdf` into the single file `out_pdf`:
