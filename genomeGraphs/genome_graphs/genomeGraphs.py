@@ -19,7 +19,7 @@ import atexit
 #import genomeGraphs.pympileup
 ##import genomeGraphs
 
-VERSION= '0.3.0' ## MAKE IT MATCH setup.py
+VERSION= '0.3.1' ## MAKE IT MATCH setup.py
 
 # HOWTO: Add recyclable graphical parameters
 # ------------------------------------------
