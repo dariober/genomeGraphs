@@ -478,7 +478,7 @@ def main():
     
     # ---------------------[ Pre-filter non-bam files ]-------------------------
     
-    xinbed= pybedtools.BedTool(inbed).each(pycoverage.slopbed, slop).merge().saveas()
+    xinbed= pybedtools.BedTool(inbed).each(pycoverage.slopbed, slop).sort().merge().saveas()
     ## BigWigs: Pass them through bigWigToBedGraph.py and replace the output name
     ## in nonbamlist. exts: .bw, .bigWig, .bigwig 
     nonbam_dict= {}
