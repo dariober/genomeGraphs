@@ -13,6 +13,7 @@ import pympileup
 import validate_args
 import pybedtools
 import atexit
+import gzip
 
 #from genomeGraphs.pycoverage import *
 #from genomeGraphs.validate_args import *
